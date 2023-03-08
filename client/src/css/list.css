@@ -1,0 +1,105 @@
+.listContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.listWrapper {
+    width:100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 20px;
+}
+
+.listSearch {
+    flex: 1;
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+    height: max-content;
+}
+
+.listSearchTitle {
+    font-size: 20px;
+    color: grey;
+    margin-bottom: 20px;
+}
+
+.listSearchItems {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.listSearchItems label {
+    font-size: 12px;
+}
+
+.listSearchItems input {
+    height: 30px;
+    border: none;
+    padding: 5px;
+}
+
+.listSearchItems span {
+    height: 30px;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.personOptions{
+    position: absolute;
+    background-color: white;
+    color: grey;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.4);
+    z-index: 2;
+    margin-top: 210px;
+}
+
+.personOptionsItems {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.optionCount{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: black;
+}
+
+.optionCountButton {
+    width: 30px;
+    height: 30px;
+    border: 1px solid blue;
+    color: blue;
+    cursor: pointer;
+    background-color: white;
+}
+
+.optionCountButton:disabled {
+    cursor: not-allowed;
+}
+
+button {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: 500;
+    cursor: pointer;
+}
+.listResults {
+    flex: 3;
+}

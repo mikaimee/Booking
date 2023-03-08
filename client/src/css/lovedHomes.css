@@ -1,0 +1,38 @@
+.lovedHomes {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.lovedHomeItems {
+    flex: 1;
+    gap: 10px;
+}
+
+.lovedHomeImg {
+    width: 100%;
+}
+
+.lovedHomeTitle h2 {
+    font-weight: bold;
+}
+
+.lovedHomeTitle h3 {
+    font-weight: 500;
+    color: grey;
+}
+
+.lovedHomeReviews button{
+    background-color: blue;
+    color: white;
+    border: none;
+    margin-right:10px;
+    padding: 3px;
+    font-weight: bold;
+}
+
+.lovedHomeReviews span{
+    font-size: 14px;
+}
