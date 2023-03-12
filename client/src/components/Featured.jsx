@@ -1,20 +1,35 @@
 import "../css/featured.css"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from "axios";
 import useFetch from "../hooks/useFetch"
 
 const Featured = () => {
 
-    const {data, loading, error} = useFetch("localhost:8000/api/hotels/byCity?cities=bothell,seattle")
+    const {data, loading, error} = useFetch("http://localhost:8000/api/hotels/byType")
 
     console.log(data)
 
+    // const [allHotels, setAllHotels] = useState([]);
+
+    // useEffect(() => {
+    //     axios.get("http://localhost:8000/api/hotels")
+    //     .then((res) => {
+    //         console.log(res);
+    //         console.log(res.data);
+    //         setAllHotels(res.data)
+    //     })
+    //     .catch((err) => {
+    //         console.log(err)
+    //     })
+    // }, [])
+
     return (
         <div className="featured">
-            {loading ? ("Loading please wait ") : (<> <div className="featuredItems">
+            <> <div className="featuredItems">
                 <img src="https://cf.bstatic.com/xdata/images/city/600x600/976919.jpg?k=b4d2dd3f87340b547a0e1aa9fc7e89b47ebe9539086c7f5f4e637e5e2137be7c&o=" alt="Orlando Image" className="featuredImg" />
                 <div className="featuredTitle">
                     <h1>Seattle</h1>
-                    <h2>{data[0]} properties</h2>
+                    <h2> properties</h2>
                 </div>
             </div>
             <div className="featuredItems">
@@ -28,7 +43,7 @@ const Featured = () => {
                 <div className="featuredTitle">
                     <h1>Las Vegas</h1>
                 </div>
-            </div></>)}
+            </div></>
         </div>
     )
 }

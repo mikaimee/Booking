@@ -79,7 +79,7 @@ export const List = () => {
                                     </div>
                                 </div>}
                         </div>
-                        <button>Search</button>
+                        <button className="searchButton">Search</button>
                     </div>
                     <div className="listResults">
                         <SearchResults /> 

@@ -1,7 +1,7 @@
 import "../css/header.css"
 import React, {useState} from 'react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {faBed, faCalendarDay, faCar, faCartFlatbed, faEarthAmericas, faLandmark, faPerson, faPlane, faTaxi, faUserLarge} from "@fortawesome/free-solid-svg-icons"
+import {faBed, faBuilding, faCalendarDay, faCar, faCartFlatbed, faCity, faEarthAmericas, faHotel, faHouse, faLandmark, faPerson, faPlane, faTaxi, faUserLarge, faWater} from "@fortawesome/free-solid-svg-icons"
 import {DateRange} from "react-date-range";
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
@@ -46,36 +46,8 @@ const Header = ({type}) => {
     return (
         <div className="header">
             <div className={type === "list" ? "headerContainer listMode" : "headerContainer"}>
-                <div className="headerList">
-                    <div className="headerListItem active">
-                        <FontAwesomeIcon icon={faBed} />
-                        <span>Stays</span>
-                    </div>
-                    <div className="headerListItem active">
-                        <FontAwesomeIcon icon={faPlane} />
-                        <span>Flights</span>
-                    </div>
-                    <div className="headerListItem active">
-                        <FontAwesomeIcon icon={faEarthAmericas} />
-                        <span>Flight + Hotel</span>
-                    </div>
-                    <div className="headerListItem active">
-                        <FontAwesomeIcon icon={faCar} />
-                        <span>Car rentals</span>
-                    </div>
-                    <div className="headerListItem active">
-                        <FontAwesomeIcon icon={faLandmark} />
-                        <span>Atrractions</span>
-                    </div>
-                    <div className="headerListItem active">
-                        <FontAwesomeIcon icon={faTaxi} />
-                        <span>Airport Taxis</span>
-                    </div>
-                </div>
                 { type !== "list" &&
                     <>
-                        <h1 className="headerTitle">Find deals for any season</h1>
-                        <p className="headerDescription">From cozy bed & breakfasts to luxury hotels</p>
                         <div className="headerSearch">
                             <div className="headerSearchItem">
                                 <FontAwesomeIcon icon={faCartFlatbed} className="headerIcon"/>
@@ -95,7 +67,7 @@ const Header = ({type}) => {
                             </div>
                             <div className="headerSearchItem">
                                 <FontAwesomeIcon icon={faUserLarge} className="headerIcon"/>
-                                <span onClick={() => setOpenPerson(!openPerson)} className="headerSearchText">{`${person.adult} adult * ${person.children} children * ${person.room} room`}</span>
+                                <span onClick={() => setOpenPerson(!openPerson)} className="headerSearchText">{`${person.adult} adult • ${person.children} children • ${person.room} room`}</span>
                                 { openPerson && <div className="personOptions" >
                                     <div className="personOptionsItems">
                                         <span className="optionText">Adult</span>
@@ -129,9 +101,33 @@ const Header = ({type}) => {
                             <div className="headerSearchItem">
                                 <button className="headerButton" onClick={handleSearch}>Search</button>
                             </div>
-                        </div> 
+                        </div>
+                        <h1 className="headerTitle">Find deals for any season</h1>
+                        <p className="headerDescription">From cozy bed & breakfasts to luxury hotels</p>
                     </>
                 }
+                <div className="headerList">
+                    <div className="headerListItem active">
+                        <FontAwesomeIcon icon={faHotel} />
+                        <span>Hotels</span>
+                    </div>
+                    <div className="headerListItem active">
+                        <FontAwesomeIcon icon={faBuilding} />
+                        <span>Apartments</span>
+                    </div>
+                    <div className="headerListItem active">
+                        <FontAwesomeIcon icon={faWater} />
+                        <span>Resorts</span>
+                    </div>
+                    <div className="headerListItem active">
+                        <FontAwesomeIcon icon={faHouse} />
+                        <span>Hostels</span>
+                    </div>
+                    <div className="headerListItem active">
+                        <FontAwesomeIcon icon={faCity} />
+                        <span>Villas</span>
+                    </div>
+                </div>
             </div>
         </div>
     );

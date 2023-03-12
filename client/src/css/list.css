@@ -91,9 +91,8 @@
     cursor: not-allowed;
 }
 
-button {
+.searchButton {
     padding: 10px;
-    background-color: blue;
     color: white;
     border: none;
     width: 100%;
